@@ -6,19 +6,90 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Trivia</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href=".\assets\css\style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <button id="start" type="button" name="button">Start</button>
-  <h2 id="test_status"></h2>
-  <div id="test"></div>
+  <div class="row text-center">
+    <nav class="div col-lg-12 logo">
+      <img src="assets/img/happytrivia.png" alt="" class="logo-img">
+    </nav>
+  </div>
 
-  <section class="category">
+  <section id="configuration" class="next container">
+    <div class="row">
+      <div class="col-12">
+        <input id="pickNumber" type="number" min="1" max="50" value="10">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <select name="" id="pickCategory">
+          <option value="">Any category</option>
+          <option value="9">General knowledge</option>
+          <option value="10">Books</option>
+          <option value="11">Films</option>
+          <option value="12">Music</option>
+          <option value="13">Musicals & Theatres</option>
+          <option value="14">Television</option>
+          <option value="15">Video games</option>
+          <option value="16">Board games</option>
+          <option value="17">Science & Nature </option>
+          <option value="18">Science: Computers</option>
+          <option value="19">Science: Mathematics</option>
+          <option value="20">Mythology</option>
+          <option value="21">Sports</option>
+          <option value="22">Geography</option>
+          <option value="23">History</option>
+          <option value="24">Politics</option>
+          <option value="25">Art</option>
+          <option value="26">Celebrities</option>
+          <option value="27">Animals</option>
+          <option value="28">Vehicles</option>
+          <option value="29">Comics</option>
+          <option value="30">Gadgets</option>
+          <option value="31">Anime & Manga</option>
+          <option value="32">Cartoons & Animations</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <select name="" id="pickDifficulty">
+          <option value="">Any difficulty</option>
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <select name="" id="pickType">
+          <option value="">Any type</option>
+          <option value="multiple">Multiple choice</option>
+          <option value="boolean">True or false</option>
+        </select>
+      </div>
+    </div>
+
+    <button class="btn start" id="setQuestions" type="button" onclick="setQuestions()">Start!</button>
+  </section>
+
+  <section id="questions" class="container">
 
   </section>
 
+<!--<div class="row">
+  <div class="col-xs-12 text-center">
+    <button id="google-sign" onclick="signIn()" type="button"> Iniciar con google</button>
+  </div>
+</div>-->
 
 
+  <script src="https://www.gstatic.com/firebasejs/4.10.0/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-auth.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="./assets/js/app.js"></script>
 </body>
